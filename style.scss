@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600;700&display=swap');
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/* CONFIGURACION */
+*,*::after,*::before{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+/* ROOT */
+$fuente:'Mulish', sans-serif;
+$color-azul:#003566;
+$color-azul-S:#001d3d;
+$color-white:#ffffff;
+$color-background:#000814;
+$color-button-p:#023e8a;
+$color-button-s:#03045e;
+$ancho-contenedor: 75rem;
+@mixin font-style {
+    color: $color-white;
+    font-family: $fuente;
+    font-size: 1.125rem;
+}
+
+/* ESTILOS GENERALES */
+body {
+    background:$color-background;
+    @include font-style;
+}
+p{
+    line-height: 2rem;
+}
+img{
+    vertical-align: top;
+    width: 100%;
+}
+/* CONTENEDORES */
+.contenedor {
+    max-width: 90%;
+    width: $ancho-contenedor;
+    margin: 1.125rem auto;
+    overflow: hidden;
+}
+/* Grid */
+.grid{
+    display: grid;
+    gap: 20px;
+    margin-bottom: 1.25rem;
+}
+/* TAMAÑO GRANDE */
+.col-1{ grid-template-columns: repeat(1,1fr);}
+.col-2{ grid-template-columns: repeat(2,1fr);}
+.col-3{ grid-template-columns: repeat(3,1fr);}
+.col-4{ grid-template-columns: repeat(4,1fr);}
+.col-5{ grid-template-columns: repeat(5,1fr);}
+.col-6{ grid-template-columns: repeat(6,1fr);}
+.col-7{ grid-template-columns: repeat(7,1fr);}
+.col-8{ grid-template-columns: repeat(8,1fr);}
+.col-9{ grid-template-columns: repeat(9,1fr);}
+.col-10{ grid-template-columns: repeat(10,1fr);}
+.col-11{ grid-template-columns: repeat(11,1fr);}
+.col-12{ grid-template-columns: repeat(12,1fr);}
+
+.span-1{grid-column: span 1;}
+.span-2{grid-column: span 2;}
+.span-3{grid-column: span 3;}
+.span-4{grid-column: span 4;}
+.span-5{grid-column: span 5;}
+.span-6{grid-column: span 6;}
+.span-7{grid-column: span 7;}
+.span-8{grid-column: span 8;}
+.span-9{grid-column: span 9;}
+.span-10{grid-column: span 10;}
+.span-11{grid-column: span 11;}
+.span-12{grid-column: span 12;}
+/* TAMAÑO MEDIANO */
+@media screen and (max-width:992px) {    
+    .med-col-1{ grid-template-columns: repeat(1,1fr);}
+    .med-col-2{ grid-template-columns: repeat(2,1fr);}
+    .med-col-3{ grid-template-columns: repeat(3,1fr);}
+    .med-col-4{ grid-template-columns: repeat(4,1fr);}
+    .med-col-5{ grid-template-columns: repeat(5,1fr);}
+    .med-col-6{ grid-template-columns: repeat(6,1fr);}
+    .med-col-7{ grid-template-columns: repeat(7,1fr);}
+    .med-col-8{ grid-template-columns: repeat(8,1fr);}
+    .med-col-9{ grid-template-columns: repeat(9,1fr);}
+    .med-col-10{ grid-template-columns: repeat(10,1fr);}
+    .med-col-11{ grid-template-columns: repeat(11,1fr);}
+    .med-col-12{ grid-template-columns: repeat(12,1fr);}
+
+    .med-span-1{grid-column: span 1;}
+    .med-span-2{grid-column: span 2;}
+    .med-span-3{grid-column: span 3;}
+    .med-span-4{grid-column: span 4;}
+    .med-span-5{grid-column: span 5;}
+    .med-span-6{grid-column: span 6;}
+    .med-span-7{grid-column: span 7;}
+    .med-span-8{grid-column: span 8;}
+    .med-span-9{grid-column: span 9;}
+    .med-span-10{grid-column: span 10;}
+    .med-span-11{grid-column: span 11;}
+    .med-span-12{grid-column: span 12;}
+}
+/* TAMAÑO PEQUEÑO */
+@media screen and (max-width:576px){
+    .peq-col-1{ grid-template-columns: repeat(1,1fr);}
+    .peq-col-2{ grid-template-columns: repeat(2,1fr);}
+    .peq-col-3{ grid-template-columns: repeat(3,1fr);}
+    .peq-col-4{ grid-template-columns: repeat(4,1fr);}
+    .peq-col-5{ grid-template-columns: repeat(5,1fr);}
+    .peq-col-6{ grid-template-columns: repeat(6,1fr);}
+    .peq-col-7{ grid-template-columns: repeat(7,1fr);}
+    .peq-col-8{ grid-template-columns: repeat(8,1fr);}
+    .peq-col-9{ grid-template-columns: repeat(9,1fr);}
+    .peq-col-10{ grid-template-columns: repeat(10,1fr);}
+    .peq-col-11{ grid-template-columns: repeat(11,1fr);}
+    .peq-col-12{ grid-template-columns: repeat(12,1fr);}
+
+    .peq-span-1{grid-column: span 1;}
+    .peq-span-2{grid-column: span 2;}
+    .peq-span-3{grid-column: span 3;}
+    .peq-span-4{grid-column: span 4;}
+    .peq-span-5{grid-column: span 5;}
+    .peq-span-6{grid-column: span 6;}
+    .peq-span-7{grid-column: span 7;}
+    .peq-span-8{grid-column: span 8;}
+    .peq-span-9{grid-column: span 9;}
+    .peq-span-10{grid-column: span 10;}
+    .peq-span-11{grid-column: span 11;}
+    .peq-span-12{grid-column: span 12;}
+}
+/* COMPONENTES */
+.main{
+    margin-top: 4rem;
+}
+.card {
+    padding: 1rem;
+    background: $color-azul-S;
+    border-radius: 3px;
+}
+.card-image{
+    background: #b0b0bb;
+    width: 100%;
+    height: 9.375rem;
+}
+
+.navbar{
+    background: $color-azul;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    a{
+        color: #ffffff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 15px 25px;
+        transition: .3s ease all;
+        font-size: 1.125rem;
+    }
+}
+
+.navbar a.activo,
+.navbar a:hover{
+    background: $color-azul-S;
+}
+.navbar .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+/* FUENTES */
+h1,h2,h3,h4,h5{
+    margin-top: 0;
+}
+.display-1{
+    font-weight: 700;
+    font-size: 4rem ;
+}
+.display-2{
+    font-weight: 600;
+    font-size: 3.4rem ;
+}
+.display-3{
+    font-weight: 300;
+    font-size: 2.8rem ;
+}
+/* FORMULARIOS */
+form * {
+    font-family: $fuente;
+}
+form .input {
+    padding: 10px 15px;
+    border-radius: 2px;
+    border: 1px solid white;
+    transition: .3s ease all;
+    width: 100%;
+    margin-bottom: 20px;
+}
+form .input{
+    border: 1px solid $color-background;
+    outline: none;
+}
+.boton{
+    background: $color-button-p;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: $color-white;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 22px;
+    transition: .3s ease all;
+}
+.boton:hover{
+    background: #0077b6;
+}
+.boton.dark{
+    background: $color-button-s;
+}
+.boton.boton.dark:hover{
+    background: #0077b6;
+}
+/* HELPERS */
+.no-margen{ margin: 0}
+.no-margen-superior{ margin-top: 0}
+.no-margen-inferior{ margin-bottom: 0}
+.no-margen-izquierdo{ margin-left: 0}
+.no-margen-derecho{ margin-right: 0}
+
+.margen-inferior{margin-bottom:20px}
+.margen-superior{margin-top:20px}
+
+.texto-centrado{text-align: center}
+.texto-izquierda{text-align: left}
+.texto-derecha{text-align:right}
+
